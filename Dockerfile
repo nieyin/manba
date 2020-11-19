@@ -31,8 +31,7 @@ RUN MAIN_VERSION=$(cat /etc/alpine-release | cut -d '.' -f 0-2) \
     && if [ -e ${CURRENT_EXEC_PATH} ]; then \
          setcap CAP_NET_BIND_SERVICE=+eip ${CURRENT_EXEC_PATH}; \
        fi \
-    && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf \
-    && echo -n ${CMD_NAME} > cmd
+    && echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf
 
 USER manba
 
