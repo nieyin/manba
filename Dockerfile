@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ARG APP_ROOT=/app/manba
-ARG EXEC_NAME=manba-proxy
+ARG EXEC_NAME=proxy
 ARG UID=2019
 ARG CMD_NAME=demo
 ENV CURRENT_EXEC_PATH=${APP_ROOT}/${EXEC_NAME}
