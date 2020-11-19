@@ -9,7 +9,7 @@ ENV PATH=${APP_ROOT}:$PATH
 
 WORKDIR ${APP_ROOT}
 
-ADD dist ${APP_ROOT}
+ADD ./cmd ${APP_ROOT}
 
 # Alpine Linux doesn't use pam, which means that there is no /etc/nsswitch.conf,
 # but Golang relies on /etc/nsswitch.conf to check the order of DNS resolving
